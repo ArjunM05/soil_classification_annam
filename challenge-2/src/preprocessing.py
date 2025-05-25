@@ -6,7 +6,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, models
 from tqdm import tqdm
-from sklearn.decomposition import PCA
+from sklearn.decomposition import PCA # type: ignore
 import pickle
 
 class SoilDataset(Dataset):
