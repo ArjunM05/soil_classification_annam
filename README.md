@@ -7,17 +7,22 @@ This repository contains the code and resources for two distinct Kaggle challeng
 
 The project aims to demonstrate robust deep learning solutions for automated soil classification.
 
+### Team
+
+- **Team Name**: Expendables
+- **Team Leader**: Sushmetha S R
+- **Team Members**: Sushmetha S R, Abhinav Chaitanya R, Arjun M, Harshavardhan S, Kiranchandran H
+- **Affiliation**: Vellore Institute of Technology, VIT Chennai
+
 ## Table of Contents
 
 1.  [Challenge 1: Multiclass Classification](#challenge-1-multiclass-classification)
     - [Goal](#goal-1)
-    - [Team](#team)
     - [Approach](#approach-1)
     - [Evaluation](#evaluation-1)
     - [Files](#files-1)
 2.  [Challenge 2: Binary Classification](#challenge-2-binary-classification)
     - [Goal](#goal-2)
-    - [Team](#team-2)
     - [Approach](#approach-2)
     - [Evaluation](#evaluation-2)
     - [Files](#files-2)
@@ -40,13 +45,6 @@ This part of the project focuses on classifying soil images into four distinct c
 
 The primary goal is to develop a deep learning model capable of accurately identifying the type of soil from an image, submitting results to the "Soil Classification Part 1" Kaggle challenge.
 
-### Team
-
-- **Team Name**: Expendables
-- **Team Leader**: Sushmetha S R
-- **Team Members**: Abhinav Chaitanya R, Arjun M, Harshavardhan S, Kiranchandran H, Sushmetha S R
-  - **Affiliation**: Vellore Institute of Technology, VIT Chennai
-
 ### Approach
 
 - **Model**: An EfficientNetV2-S model, pretrained on ImageNet, was used as the base model for transfer learning.
@@ -68,6 +66,7 @@ The primary goal is to develop a deep learning model capable of accurately ident
 
 - **Metrics**: F1-score is the primary evaluation metric, calculated class-wise (Alluvial, Black, Clay, Red soil).
 - **Visuals**: Includes image distribution, training history plots (loss and F1-score over epochs), and a confusion matrix to assess class-wise accuracy.
+- **ml-metrics.json**: Contains the final binary classification metrics.
 - **Leaderboard Rank**: 73
 
 ### Files
@@ -92,10 +91,9 @@ The goal is to accurately classify images as 'soil' (positive) or 'non-soil' (ne
 
 ### Team
 
-- **Author**: Sushmetha S R
 - **Team Name**: expendables
-- **Team Members**: Abhinav Chaitanya R, Arjun M, Harshavardhan S, Kiranchandran H, Sushmetha S R
-- **Leaderboard Rank**: 25
+- **Team Leader**: Sushmetha S R
+- **Team Members**: Sushmetha S R, Abhinav Chaitanya R, Arjun M, Harshavardhan S, Kiranchandran H,
 
 ### Approach
 
@@ -115,6 +113,7 @@ The goal is to accurately classify images as 'soil' (positive) or 'non-soil' (ne
 - **Metrics**: F1-score, Precision, Recall, and Accuracy for binary classification.
 - **Visuals**: Includes display of sample training images and analysis of PCA feature distribution and RGB distribution.
 - **ml-metrics.json**: Contains the final binary classification metrics.
+- **Leaderboard Rank**: 25
 
 ### Files
 
@@ -130,13 +129,13 @@ The goal is to accurately classify images as 'soil' (positive) or 'non-soil' (ne
 Ensure you have Python installed (version 3.10+ recommended).
 The following Python packages are required:
 
-Pillow>=9.0.0
-pandas>=1.3.0
-numpy>=1.21.0
-scikit-learn>=1.0.0
-torch>=1.10.0
-torchvision>=0.11.0
-tqdm>=4.62.0
+- Pillow >= 9.0.0
+- pandas >= 1.3.0
+- numpy >= 1.21.0
+- scikit-learn >= 1.0.0
+- torch >= 1.10.0
+- torchvision >= 0.11.0
+- tqdm >= 4.62.0
 
 ### Data Download
 
@@ -149,27 +148,27 @@ The datasets for both challenges are part of Kaggle competitions. You will need 
 
 It is recommended to structure your project directory as follows, especially for the binary classification challenge data paths mentioned in `training.ipynb`:
 
-.
-├── requirements.txt
-├── preprocessing.py (for multiclass preprocessing)
-├── training.ipynb (for Binary Classification)
-├── project-card.ipynb (info for Multiclass)
-├── project-card-1.ipynb (info for Multiclass)
-├── data/
-│ ├── soil_classification-2025/ (for Challenge 1 - Multiclass)
-│ │ ├── train/
-│ │ ├── test/
-│ │ └── train_labels.csv
-│ │ └── test_ids.csv
-│ └── soil_competition-2025/ (for Challenge 2 - Binary)
-│ ├── train/ (contains soil images)
-│ └── train_labels.csv (contains image_ids for binary challenge)
-└── models/
-└── best_model.pth (trained model for Multiclass, if generated)
-└── outputs/
-├── ml-metrics.json
-├── training_history.png (Multiclass)
-└── confusion_matrix.png (Multiclass)
+.<br>
+├── requirements.txt<br>
+├── preprocessing.py (for multiclass preprocessing)<br>
+├── training.ipynb (for Binary Classification)<br>
+├── project-card.ipynb (info for Multiclass)<br>
+├── project-card-1.ipynb (info for Multiclass)<br>
+├── data/<br>
+│ ├── soil_classification-2025/ (for Challenge 1 - Multiclass)<br>
+│ │ ├── train/<br>
+│ │ ├── test/<br>
+│ │ └── train_labels.csv<br>
+│ │ └── test_ids.csv<br>
+│ └── soil_competition-2025/ (for Challenge 2 - Binary)<br>
+│ ├── train/ (contains soil images)<br>
+│ └── train_labels.csv (contains image_ids for binary challenge)<br>
+└── models/<br>
+└── best_model.pth (trained model for Multiclass, if generated)<br>
+└── outputs/<br>
+├── ml-metrics.json<br>
+├── training_history.png (Multiclass)<br>
+└── confusion_matrix.png (Multiclass)<br>
 
 **Note on data paths:** The notebooks are written with Kaggle environment paths (e.g., `/kaggle/input/...`). You might need to adjust these paths in the Python scripts/notebooks (`training.ipynb`, `preprocessing.py`) to match your local setup after downloading the data.
 
@@ -196,7 +195,7 @@ It is recommended to structure your project directory as follows, especially for
 
 ### Running Challenge 1 (Multiclass)
 
-1.  **Preprocessing**: The `preprocessing.py` script likely contains the `SoilDataset` class and transformation definitions. You would typically import these into your training notebook.
+1.  **Preprocessing**: The `preprocessing.py` script contains the `SoilDataset` class and transformation definitions. You would typically import these into your training notebook.
 2.  **Training**: Open and run the `training.ipynb` (for multiclass) notebook in a Jupyter environment. This notebook will handle data loading, model training, and evaluation.
 3.  **Inference**: After training, use `inference.ipynb` to generate predictions on the test set and create a submission file.
 
@@ -213,6 +212,7 @@ It is recommended to structure your project directory as follows, especially for
     ```bash
     # Example (assuming you have jupyter installed and are in the repo root)
     jupyter notebook training.ipynb # For binary classification
+    jupyter notebook inference.ipynb # For multiclass inference
     ```
 
     This will generate `ml-metrics.json` with the binary classification results.
