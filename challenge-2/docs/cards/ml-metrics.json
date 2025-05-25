@@ -1,0 +1,12 @@
+{
+  "_comment": "This JSON file contains the ML metrics for binary classification",
+  "Name": "Sushmetha S R",
+  "Kaggle Username": "sushmethasr21bai1162",
+  "Team Name": "expendables",
+  "metrics": {
+    "f1_score_soil": 0.9462365591397849,
+    "precision_soil": 1.0,
+    "recall_soil": 0.8979591836734694,
+    "accuracy": 0.8979591836734694
+  }
+}
