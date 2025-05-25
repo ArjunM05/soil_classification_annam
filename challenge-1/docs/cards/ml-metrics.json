@@ -1,0 +1,13 @@
+{
+  "_comment": "This JSON file contains the ML metrics for multiclass classification",
+  "Name": "Sushmetha S R",
+  "Kaggle Username": "sushmethasr21bai1162",
+  "Team Name": "expendables",
+  "f1 scores": {
+    "_comment": "Here are the class wise f1 scores",
+    "Alluvial soil": 0.9758454106280194,
+    "Red soil": 0.9906542056074767,
+    "Black soil": 0.968421052631579,
+    "Clay soil": 0.9629629629629629
+  }
+}
