@@ -89,12 +89,6 @@ This part of the project addresses the binary classification task: determining i
 
 The goal is to accurately classify images as 'soil' (positive) or 'non-soil' (negative) and achieve a high F1-score for the binary classification challenge.
 
-### Team
-
-- **Team Name**: expendables
-- **Team Leader**: Sushmetha S R
-- **Team Members**: Sushmetha S R, Abhinav Chaitanya R, Arjun M, Harshavardhan S, Kiranchandran H,
-
 ### Approach
 
 - **Model**: EfficientNet-B0, pretrained on ImageNet, is used as a feature extractor. The classifier head is replaced with an Identity layer to obtain 1280-D features.
