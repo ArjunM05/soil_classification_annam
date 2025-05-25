@@ -7,7 +7,7 @@
 # notebook: 'username/notebook-name'
 
 # === Example: Download a dataset ===
-KAGGLE_DATASET="annam-ai/soilclassification"
+KAGGLE_DATASET="annam-ai/soil-classification-part-2"
 TARGET_DIR="./data"
 
 echo "Downloading dataset: $KAGGLE_DATASET"
